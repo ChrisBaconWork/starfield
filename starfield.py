@@ -6,7 +6,8 @@ from pygame.locals import *
 def initialise_game():
     """Initialise game state"""
     pygame.init()
-    width, height = 2000, 2000
+    info = pygame.display.Info()
+    width, height = info.current_w, info.current_h
     centre = (width / 2, height / 2)
     display = pygame.display.set_mode((width, height))
     return width, height, centre, display
